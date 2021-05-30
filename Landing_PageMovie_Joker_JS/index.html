@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker Movie Landing Page</title>
+</head>
+<body>
+   <header>
+       <a href="#" class="logo"><img src="images/logo.png"></a>
+       <div class="toggle"><img src="images/toggle.png"></div><!--toggle-->
+   </header> 
+   <div class="banner">
+       <div class="content">
+           <h2>Put on a <span>happy</span> face</h2>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto debitis atque tempora ad corporis, nam animi voluptatum quod in aliquam doloremque cupiditate, facere vero perspiciatis excepturi ducimus iste deserunt libero?</p>
+           <a href="#" class="play" onclick="toggle();"><img src="images/play.png">Watch Trailer</a>
+           <div class="slide"></div><!--slide-->
+           <ul class="sci">
+                <li><a href="#"><img src="images/facebook.png"></a></li>
+                <li><a href="#"><img src="images/twitter.png"></a></li>
+                <li><a href="#"><img src="images/instagram.png"></a></li>
+           </ul>
+        </div><!--content-->
+   </div><!--banner-->
+   <div class="trailer">
+   <video src="Trailer.mp4" controls="true"></video>
+   <img src="images/close.png" class="close" onclick="toggle();">
+</div><!--trailer-->
+
+<script type="text/javascript">
+    function toggle(){
+        var trailer = document.querySelector('.trailer');
+        var video = document.querySelector('video');
+        trailer.classList.toggle('active')
+        video.currentTime = 0;
+        video.pause();
+    }
+</script>
+
+</body>
+</html>
